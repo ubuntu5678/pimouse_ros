@@ -1,5 +1,9 @@
 cmake_minimum_required(VERSION 2.8.3)
+<<<<<<< HEAD
+project(pimouse_run_corridor)
+=======
 project(pimouse_ros)
+>>>>>>> de68ebc870599929cdd02f2c6e841c919b27fa2a
 
 ## Add support for C++11, supported in ROS Kinetic and newer
 # add_definitions(-std=c++11)
@@ -7,11 +11,15 @@ project(pimouse_ros)
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
+<<<<<<< HEAD
+find_package(catkin REQUIRED)
+=======
 find_package(catkin REQUIRED COMPONENTS
   rospy
   std_msgs
   message_generation
 )
+>>>>>>> de68ebc870599929cdd02f2c6e841c919b27fa2a
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -47,11 +55,16 @@ find_package(catkin REQUIRED COMPONENTS
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
 ## Generate messages in the 'msg' folder
+<<<<<<< HEAD
+# add_message_files(
+#   FILES
+=======
 add_message_files(
   FILES
   LightSensorValues.msg
   MotorFreqs.msg
 )
+>>>>>>> de68ebc870599929cdd02f2c6e841c919b27fa2a
 #   Message1.msg
 #   Message2.msg
 # )
@@ -71,10 +84,17 @@ add_message_files(
 # )
 
 ## Generate added messages and services with any dependencies listed here
+<<<<<<< HEAD
+# generate_messages(
+#   DEPENDENCIES
+#   std_msgs  # Or other packages containing msgs
+# )
+=======
 generate_messages(
   DEPENDENCIES
   std_msgs
 )
+>>>>>>> de68ebc870599929cdd02f2c6e841c919b27fa2a
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -107,8 +127,13 @@ generate_messages(
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
+<<<<<<< HEAD
+#  LIBRARIES pimouse_run_corridor
+#  CATKIN_DEPENDS other_catkin_pkg
+=======
 #  LIBRARIES pimouse_ros
  CATKIN_DEPENDS rospy std_msgs message_runtime
+>>>>>>> de68ebc870599929cdd02f2c6e841c919b27fa2a
 #  DEPENDS system_lib
 )
 
@@ -119,6 +144,12 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 # include_directories(include)
+<<<<<<< HEAD
+
+## Declare a C++ library
+# add_library(${PROJECT_NAME}
+#   src/${PROJECT_NAME}/pimouse_run_corridor.cpp
+=======
 include_directories(
   ${catkin_INCLUDE_DIRS}
 )
@@ -126,6 +157,7 @@ include_directories(
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
 #   src/${PROJECT_NAME}/pimouse_ros.cpp
+>>>>>>> de68ebc870599929cdd02f2c6e841c919b27fa2a
 # )
 
 ## Add cmake target dependencies of the library
@@ -136,7 +168,11 @@ include_directories(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
+<<<<<<< HEAD
+# add_executable(${PROJECT_NAME}_node src/pimouse_run_corridor_node.cpp)
+=======
 # add_executable(${PROJECT_NAME}_node src/pimouse_ros_node.cpp)
+>>>>>>> de68ebc870599929cdd02f2c6e841c919b27fa2a
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -193,7 +229,11 @@ include_directories(
 #############
 
 ## Add gtest based cpp test target and link libraries
+<<<<<<< HEAD
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_pimouse_run_corridor.cpp)
+=======
 # catkin_add_gtest(${PROJECT_NAME}-test test/test_pimouse_ros.cpp)
+>>>>>>> de68ebc870599929cdd02f2c6e841c919b27fa2a
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()
